@@ -111,5 +111,3 @@ The system detects the following key network attack vectors using purely softwar
 - **Database Layer**: MongoDB 6.0+ with Mongoose / Motor, compound indexes, and 24h/30d TTL auto-expiration.
 - **Frontend Dashboard**: React.js / Modern Web UI with Tailwind CSS, Chart.js / Recharts, and dark-mode glassmorphism styling.
 - **Hardware Requirement**: **None** (100% Software Solution running on standard PC/laptop software network interfaces).
-#   R e a l - T i m e - N e t w o r k - M o n i t o r i n g - C y b e r - T h r e a t - D e t e c t i o n - S y s t e m  
- 
