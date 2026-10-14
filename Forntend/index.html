@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real-time network monitor and threat detection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Real-time network monitor and threat detection</h1>
+    <p class="sub">Explainable AI detection with automatic response, built for colleges and small businesses</p>
+  </div>
+  <div class="status">
+    <span class="live"><i></i>Monitoring</span>
+    <span class="demo">Simulated data</span>
+  </div>
+</header>
+
+<section class="kpis" aria-label="Live statistics">
+  <div><span id="k-pps">0</span><small>Packets per second</small></div>
+  <div><span id="k-flows">0</span><small>Active flows</small></div>
+  <div><span id="k-alerts">0</span><small>Alerts this session</small></div>
+  <div><span id="k-blocked">0</span><small>IPs blocked</small></div>
+  <div><span id="k-latency">0 ms</span><small>Average detection time</small></div>
+</section>
+
+<main class="grid">
+  <section class="panel traffic">
+    <h2>Network traffic</h2>
+    <div class="chart-wrap"><canvas id="trafficChart" aria-label="Live traffic chart in megabits per second" role="img"></canvas></div>
+    <div class="sim">
+      <span>Trigger a test attack</span>
+      <button data-sim="scan">Port scan</button>
+      <button data-sim="syn">SYN flood</button>
+      <button data-sim="brute">SSH brute force</button>
+      <button data-sim="arp">ARP spoofing</button>
+      <button data-sim="zero">Unknown pattern</button>
+    </div>
+  </section>
+
+  <section class="panel alerts" id="alert-root" aria-live="polite"></section>
+</main>
+
+<p class="foot">Everything on this page is simulated for demonstration. In the full system the alerts come from the Scapy or Zeek capture pipeline and the hybrid rule and machine learning engine.</p>
+<div id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="alerts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
